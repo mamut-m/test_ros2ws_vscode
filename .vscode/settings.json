@@ -70,5 +70,9 @@
         ".vscode",
         ".vscode-insiders",
         ".devcontainer/devcontainer.json"
+    ],
+    "flake8.args": [
+        "--config", 
+        "/opt/ros/humble/lib/python3.10/site-packages/ament_flake8/configuration/ament_flake8.ini"
     ]
 }
