@@ -6,6 +6,19 @@
 			"WORKSPACE": "${containerWorkspaceFolder}"
 		}
 	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+		    "installZsh": "true",
+		    "username": "ros",
+		    "userUid": "1000",
+		    "userGid": "1000",
+		    "upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+		    "version": "latest",
+		    "ppa": "false"
+		}
+	}, 
 	"remoteUser": "ros",
 	"runArgs": [
 		"--network=host",
@@ -18,10 +31,13 @@
 		// uncomment to use intel iGPU
 		// "--device=/dev/dri"
 	],
+	"postCreateCommand": ".devcontainer/post_create_command.sh"
+	,
 	"containerEnv": {
 		"DISPLAY": "${localEnv:DISPLAY}", // Needed for GUI try ":0" for windows
 		"WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
-		"XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
+		//this kills the code command in vscode termainls
+		//"XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
 		"PULSE_SERVER": "${localEnv:PULSE_SERVER}",
 		"LIBGL_ALWAYS_SOFTWARE": "1" // Needed for software rendering of opengl
 	},
@@ -41,7 +57,8 @@
 				"streetsidesoftware.code-spell-checker",
 				"twxs.cmake",
 				"yzhang.markdown-all-in-one",
-				"zachflower.uncrustify"
+				"zachflower.uncrustify",
+				"ms-python.flake8"
 			]
 		}
 	}
