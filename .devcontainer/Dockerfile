@@ -1,5 +1,5 @@
-FROM althack/ros:noetic-full
-#osrf/ros:humble-desktop
+FROM osrf/ros:noetic-desktop-full
+#althack/ros:noetic-full
 
 # ** [Optional] Uncomment this section to install additional packages. **
 #

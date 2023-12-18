@@ -7,9 +7,9 @@
 		}
 	},
 
-	"hostRequirements": {
-		"gpu": true
-	},
+	// "hostRequirements": {
+	// 	"gpu": true
+	// },
 
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
@@ -18,9 +18,9 @@
 		    "userUid": "1000",
 		    "userGid": "1000",
 		    "upgradePackages": "false"
-		},
-		//also requires host Requirements
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": {"cudaVersion":"12.1"}
+		}
+		// //also requires host Requirements
+		// "ghcr.io/devcontainers/features/nvidia-cuda:1": {"cudaVersion":"12.1"}
 		    
 	}, 
 	"remoteUser": "ros",
