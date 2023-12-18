@@ -10,10 +10,7 @@ BUILD_TYPE=RelWithDebInfo
 #   warnings.warn(
 # /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
 #   warnings.warn(
-PYTHONWARNINGS="ignore:easy_install command is deprecated,ignore:setup.py install is deprecated" \
-        colcon build \
-                --merge-install \
-                --symlink-install \
+catkin build \
                 --cmake-args \
                         "-DCMAKE_BUILD_TYPE=$BUILD_TYPE" \
                         "-DCMAKE_EXPORT_COMPILE_COMMANDS=On" \
