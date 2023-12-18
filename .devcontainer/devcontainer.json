@@ -6,18 +6,22 @@
 			"WORKSPACE": "${containerWorkspaceFolder}"
 		}
 	},
+
+	"hostRequirements": {
+		"gpu": true
+	},
+
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
 		    "installZsh": "true",
 		    "username": "ros",
 		    "userUid": "1000",
 		    "userGid": "1000",
-		    "upgradePackages": "true"
+		    "upgradePackages": "false"
 		},
-		"ghcr.io/devcontainers/features/git:1": {
-		    "version": "latest",
-		    "ppa": "false"
-		}
+		//also requires host Requirements
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": {"cudaVersion":"12.1"}
+		    
 	}, 
 	"remoteUser": "ros",
 	"runArgs": [
