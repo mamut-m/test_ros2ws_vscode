@@ -3,6 +3,9 @@ install/*
 log/*
 site/*
 
+src/*/
+!src/*repos
+
 # ros1
 .catkin_tools/*
 # Created by https://www.toptal.com/developers/gitignore/api/ros
