@@ -4,7 +4,7 @@ log/*
 site/*
 
 src/*/
-!src/*repos
+!src/*.repos
 
 # ros1
 .catkin_tools/*
