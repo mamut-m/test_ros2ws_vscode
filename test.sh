@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -f install/setup.bash ]; then source install/setup.bash; fi
-set -x
+set -xeu
 
 # to avoid topics/pointcloud_publisher/test/test_flake8.py::test_flake8
 #   Warning: SelectableGroups dict interface is deprecated. Use select.
